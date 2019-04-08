@@ -1,4 +1,4 @@
-# Charter proposal for a LOOPS WG, version 0.2.0
+# Charter proposal for a LOOPS WG, version 0.2.1
 
 ## Background
 
@@ -44,8 +44,8 @@ addressed.  The functions to be addressed by LOOPS include:
   categorized into congestion and non-congestion losses.  The losses
   that cannot be positively identified as non-congestion losses are
   relayed as congestion events to the end-to-end congestion control.
-  Circuit breakers (RFC 8084) may be employed to further protect
-  against congestion collapse.
+  Circuit breakers (RFC 8084) may be employed on the LOOPS tunnel to
+  further protect against congestion collapse.
 
 The LOOPS protocol will need to run embedded into a variety of
 tunneling protocols.  To this end, LOOPS will be defined on a generic
