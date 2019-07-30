@@ -1,4 +1,4 @@
-# Charter proposal for a LOOPS WG, version 0.2.1
+# Charter proposal for a LOOPS WG, version 0.3.0
 
 ## Background
 
@@ -52,6 +52,23 @@ tunneling protocols.  To this end, LOOPS will be defined on a generic
 information model level, and initial bindings will be defined for a
 small set of tunneling protocols to be selected by the working group.
 
+## Initial scope
+
+Initially, LOOPS will focus on a retransmission-only solution, the
+"basic LOOPS protocol".  FEC support, as well as possibly additional
+support components enabling host-to-network operation, are planned as
+additional steps.
+
+\[The IESG has to decide whether these steps can be chartered right
+away or a rechartering is needed after delivering the basic LOOPS
+protocol.]
+
+## Relationship to IRTF RGs
+
+Important groundwork for LOOPS was laid by ICCRG and NWCRG.  In
+particular the documents of the latter will serve as a basis for the
+FEC-based components of LOOPS.
+
 ## Relationship to Other WGs and SDOs
 
 LOOPS will work closely with developments in TSVWG, TCPM, and in
@@ -66,13 +83,21 @@ may include NVO3 (Geneve), intarea (GUE), spring/6man (SRv6).
 
 ## Milestones
 
-* LOOPS generic information model and protocol, WG document adopted,
+* LOOPS basic generic information model and protocol, WG document adopted,
   October 2019
-* LOOPS generic information model and protocol, PS to IESG, May 2020
+* LOOPS basic generic information model and protocol, PS to IESG, May 2020
 * LOOPS binding candidates identified and WG documents adopted,
   February 2020
 * LOOPS binding to tunneling protocol A, PS to IESG, July 2020
 * LOOPS binding to tunneling protocol B, PS to IESG, September 2020
+
+* LOOPS support for FEC, WG document adopted, June 2020
+* LOOPS support for FEC, PS to IESG, December 2020
+
+* LOOPS support for host-to-network operation, WG document adopted,
+  August 2020
+* LOOPS support for host-to-network operation, PS to IESG,
+  February 2021
 
 # Discussion
 
@@ -105,5 +130,6 @@ may include NVO3 (Geneve), intarea (GUE), spring/6man (SRv6).
 * Why don't you do multipath, optimization across several LOOPs pairs
   on the path, involve end hosts?
   * Crawl before walk; all of these are potential topics once a first
-    version of basic LOOPS is delivered.
+    version of basic LOOPS is delivered.  For now, it seems
+    host-to-network operation is a high-priority next step.
 
