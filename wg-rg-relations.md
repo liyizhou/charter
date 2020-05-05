@@ -122,7 +122,6 @@ envisioned now; could develop, though.
 * **Issue in LOOPS**: Can we integrate some of this work for
   retransmission and reconstruction?
 * Type: Watch, potentially import
-
 * **Issue in LOOPS**: Potentially (long term): Can we make some of the
   LOOPS components available in a way that is useful for DETNET and RAW?
 * Type: Export
