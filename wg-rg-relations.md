@@ -19,12 +19,13 @@ interaction with other SDOs yet.
 envisioned now; could develop, though.
 * "import": specs that the other WG works on will be used by ours.
 * "export": we could do some work that would benefit that other WG.
+* "consult": actively obtain input from the other WG (for watching or importing).
 
 <!-- ## "Transport protocol" area of work -->
 
 ## Working groups, Research Groups
 
-* Name: TCPM, TSVWG, QUIC
+* Name: TCPM, TSVWG, QUIC, AVTcore
 * Work: Transport protocol innovations
 * Issue in other group: What new transport protocol mechanisms provide
   benefits that cannot be had with a classical transport
@@ -69,7 +70,7 @@ envisioned now; could develop, though.
 
 ---
 
-* Name: RMCAT
+* Name: RMCAT, AVTcore
 * Work: Congestion control for media flows
 * **Issue in LOOPS**: Interactions between upper layer congestion control
   schemes in use for media and those in use on the LOOPS path segment
@@ -88,15 +89,14 @@ envisioned now; could develop, though.
 ---
 <!-- ## "Tunneling and encapsulation" area of work -->
 
-* Name: NVO3, INTAREA, SPRING/6MAN
+* Name: NVO3, INTAREA, SPRING/6MAN; NWCRG
 * Work: Tunnel encapsulation formats
 * **Issue in LOOPS**: We need to follow the homes of tunneling protocols
   to which bindings are being defined, which depending on the choices
-  of the WG may include NVO3 (Geneve), intarea (GUE), spring/6man
-  (SRv6).
-* Type: Import
-* To do: There is no obvious home for GRE at this point, but GRE is
-  another obvious choice for a tunneling protocol.
+  of the WG may include NVO3 (Geneve), intarea (GUE, GRE), spring/6man
+  (SRv6).  There also is some tunnel/encapsulation work done as part
+  of NWCRG's work.
+* Type: Import, consult
 
 ---
 
@@ -146,3 +146,11 @@ envisioned now; could develop, though.
 * **Issue in LOOPS**: Benefit from that leading edge work
 * Type: Watch
 
+---
+
+* Name: PANRG
+* Work: Path signaling
+* **Issue in LOOPS**: In the long run, discovering LOOPS instances
+  along the path as well as path characteristics inside the LOOPS
+  segment might get interesting.
+* Type: Watch, consult (at the right time)
