@@ -43,7 +43,8 @@ The functions to be addressed by LOOPS include:
   order to exercise the protocol mechanisms.
 
 * Local measurement.  To properly parameterize the LOOPS algorithms
-  (e.g., RTO, FEC rate), measurements are continuously performed of
+  (e.g., RTO, FEC rate) and to trigger state transitions, measurements
+  are continuously performed of
   the path segment between the tunnel endpoints.
 
 * Interaction with end-to-end congestion control.  Based on
