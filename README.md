@@ -20,8 +20,8 @@ functions such as ECN marking and AQM.
 
 LOOPS (Local Optimizations on Path Segments) attempts to capture
 opportunities opened by these developments, enabling optimizations
-within segments of an end-to-end path.  Typically, these segments are
-located between overlay nodes (tunnel endpoints), which allows a local
+within some segments of an end-to-end path.  Typically, these segments will be delimited
+as tunnels maintained by dedicated overlay nodes (tunnel endpoints), which allows a local
 optimization protocol to run between these nodes.  Many end-to-end
 flows can be aggregated into each such tunnel flow being optimized.
 
@@ -31,36 +31,43 @@ ECN (which typically requires all routes on the path segment to be
 ECN-enabled).  Also, multipath forwarding will not be specifically
 addressed.
 
+The selection of the segments to be optimized and the nodes that will
+run LOOPS optimization is deployment-specific and is out of scope;
+the assumption is that this will be performed as part of the network
+configuration, which can also supply further parameters controlling
+LOOPS.
+
 The functions to be addressed by LOOPS include:
 
-* Local recovery.  Packet losses on the path segments are recovered
+* Local recovery:  Packet losses on the path segments are recovered
   autonomously, removing the need to burden the entire end-to-end path
   with the recovery, and decreasing the latency by which these
   recoveries can be effected.  The protocol will be designed so that
   local recovery can be based on forward error correction (FEC) and/or
-  (non-persistent) retransmission; the initial focus will be on
+  (non-persistent) retransmission.  The initial focus will be on
   retransmission, but at least one FEC scheme will be included in
   order to exercise the protocol mechanisms for selecting FEC and a
   specific FEC scheme.
 
-* Local measurement.  To properly parameterize the LOOPS algorithms
+* Local measurement: To properly parameterize the LOOPS algorithms
   (e.g., RTO, FEC rate) and to trigger state transitions, measurements
   are continuously performed of
   the path segment between the tunnel endpoints.
 
-* Interaction with end-to-end congestion control.  Based on
+* Interaction with end-to-end congestion control:  Based on
   configuration and measurement information, losses can possibly be
   categorized into congestion and non-congestion losses.  As well as
-  CE events on the path, the losses that cannot be positively
+  Congestion Experienced (CE) events on the path, the losses that cannot be positively
   identified as non-congestion losses are relayed as congestion events
-  to the end-to-end congestion control; initially, LOOPS will focus on
+  to the end-to-end congestion control. Initially, LOOPS will focus on
   the use of ECN for this and therefore only supports ECN-enabled
   end-to-end flows.  Circuit breakers (RFC 8084) will be employed on
   the LOOPS tunnel to further protect against congestion collapse.
 
 The LOOPS protocol will need to run embedded into a tunneling
-protocol.  Initially, this will be Geneve (NVO3).  To enable the
-future addition of further encapsulations, LOOPS will be defined with
+protocol.  Initially, this will be Geneve (Generic Network
+Virtualization Encapsulation, NVO3 WG).  To facilitate future support of
+further encapsulations, LOOPS will be defined with
 a separation in mind between a generic information model level, and a
 set of protocol bindings that will start out as the Geneve embedding.
 
@@ -79,7 +86,7 @@ respect to their FEC-related work.
 recent developments on mechanisms used in LOOPS itself, such as ECN,
 time-based recovery, as well as, with QUIC and AVTcore, on the
 characteristics of end-to-end transport flows.)
-LOOPS will interact (in a user role) with NVO3 (Geneve) as the home of
+LOOPS will interact (in a user role) with NVO3 as the home of
 the Geneve tunneling protocol.
 
 ## Milestones
