@@ -40,7 +40,8 @@ The functions to be addressed by LOOPS include:
   local recovery can be based on forward error correction (FEC) and/or
   (non-persistent) retransmission; the initial focus will be on
   retransmission, but at least one FEC scheme will be included in
-  order to exercise the protocol mechanisms.
+  order to exercise the protocol mechanisms for selecting FEC and a
+  specific FEC scheme.
 
 * Local measurement.  To properly parameterize the LOOPS algorithms
   (e.g., RTO, FEC rate) and to trigger state transitions, measurements
@@ -83,5 +84,11 @@ the Geneve tunneling protocol.
 
 ## Milestones
 
+The main deliverable will be a LOOPS specification.
+Also, the working group will adopt a "problems and opportunities"
+document as the basis of this work; this document then does not
+necessarily need to be published by itself as an output of the WG.
+
+* LOOPS problems and opportunities, WG document adopted, September 2020
 * LOOPS specification, WG document adopted, October 2020
 * LOOPS specification, PS to IESG, October 2021
