@@ -1,4 +1,4 @@
-# Charter proposal for a LOOPS WG, version 0.4.0
+# Charter proposal for a LOOPS WG, version 0.4.1
 
 ## Background
 
