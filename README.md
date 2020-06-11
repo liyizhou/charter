@@ -1,4 +1,4 @@
-# Charter proposal for a LOOPS WG, version 0.4.1
+# Charter proposal for a LOOPS WG, version 0.4.2
 
 ## Background
 
@@ -9,7 +9,7 @@ of varying quality.  Today's PEPs often interact deeply and
 application layer protocols.  This practice is coming to an end with
 increasing deployment of encryption.
 
-At the same time, network structures are becoming more complex, and
+At the same time, networks are becoming more complex, and
 network nodes are becoming more powerful.  It is becoming more viable
 to trade processing power in network nodes against path quality, in
 particular for expensive path segments.  Transport protocols and their
@@ -29,7 +29,7 @@ Initially, LOOPS will focus on path segments that do not include
 either end host, and where the primary congestion signaling method is
 ECN (which typically requires all routes on the path segment to be
 ECN-enabled).  Also, multipath forwarding will not be specifically
-addressed.
+addressed and is left for future consideration.
 
 The selection of the segments to be optimized and the nodes that will
 run LOOPS optimization is deployment-specific and is out of scope;
@@ -91,11 +91,12 @@ the Geneve tunneling protocol.
 
 ## Milestones
 
-The main deliverable will be a LOOPS specification.
+The main deliverable will be a LOOPS specification (one or split
+between two documents, to be decided by the WG).
 Also, the working group will adopt a "problems and opportunities"
 document as the basis of this work; this document then does not
-necessarily need to be published by itself as an output of the WG.
+necessarily need to be published by itself as an RFC.
 
 * LOOPS problems and opportunities, WG document adopted, September 2020
-* LOOPS specification, WG document adopted, October 2020
+* LOOPS specification, WG document(s) adopted, October 2020
 * LOOPS specification, PS to IESG, October 2021
