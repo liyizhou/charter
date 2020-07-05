@@ -45,9 +45,10 @@ The functions to be addressed by LOOPS include:
   recoveries can be effected.  The protocol will be designed so that
   local recovery can be based on forward error correction (FEC) and/or
   (non-persistent) retransmission.  The initial focus will be on
-  retransmission, but at least one FEC scheme will be included in
+  retransmission, but a "default" FEC scheme will be included in
   order to exercise the protocol mechanisms for selecting FEC and a
-  specific FEC scheme.
+  specific FEC scheme (more state-of-the-art FEC schemes can then be
+  registered later).
 
 * Local measurement: To properly parameterize the LOOPS algorithms
   (e.g., RTO, FEC rate) and to trigger state transitions, measurements
