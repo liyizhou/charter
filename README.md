@@ -1,4 +1,4 @@
-# Charter proposal for a LOOPS WG, version 0.4.2
+# Charter proposal for a LOOPS WG, version 0.5
 
 ## Background
 
@@ -26,9 +26,7 @@ optimization protocol to run between these nodes.  Many end-to-end
 flows can be aggregated into each such tunnel flow being optimized.
 
 Initially, LOOPS will focus on path segments that do not include
-either end host, and where the primary congestion signaling method is
-ECN (which typically requires all routes on the path segment to be
-ECN-enabled).  Also, multipath forwarding will not be specifically
+either end host.  Also, multipath forwarding will not be specifically
 addressed and is left for future consideration.
 
 The selection of the segments to be optimized and the nodes that will
