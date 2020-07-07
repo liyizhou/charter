@@ -52,11 +52,8 @@ The functions to be addressed by LOOPS include:
   are continuously performed of
   the path segment between the tunnel endpoints.
 
-* Interaction with end-to-end congestion control:  Based on
-  configuration and measurement information, losses can possibly be
-  categorized into congestion and non-congestion losses.  As well as
-  Congestion Experienced (CE) events on the path, the losses that cannot be positively
-  identified as non-congestion losses are relayed as congestion events
+* Interaction with end-to-end congestion control:  As well as
+  Congestion Experienced (CE) events on the path, losses are relayed as congestion events
   to the end-to-end congestion control. Initially, LOOPS will focus on
   the use of ECN for this and therefore only supports ECN-enabled
   end-to-end flows.  Circuit breakers (RFC 8084) will be employed on
