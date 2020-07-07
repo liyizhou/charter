@@ -33,7 +33,8 @@ The selection of the segments to be optimized and the nodes that will
 run LOOPS optimization is deployment-specific and is out of scope;
 the assumption is that this will be performed as part of the network
 configuration, which can also supply further parameters controlling
-LOOPS.
+LOOPS.  LOOPS will define a simple key/value configuration data
+set that can be used by configuration protocols.
 
 The functions to be addressed by LOOPS include:
 
